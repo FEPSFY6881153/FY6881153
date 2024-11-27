@@ -200,8 +200,11 @@ document.getElementById("date&time").innerHTML = d;
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction_InText");
     const AnalysisCount = displayWordCount("Analysis_InText");
+    const PlatonismCount = displayWordCount("Platonism_InText")
+    const ConstructivismCount = displayWordCount("Constructivism_InText")
+    const A belief in both Discovery and CreativityCount = displayWordCount("A belief in both Discovery and Creativity_InText")
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
+    const totalWordCount = IntroductionCount + AnalysisCount + PlatonismCount + ConstructivismCount + A belief in both Discovery and CreativityCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
