@@ -101,7 +101,7 @@ document.getElementById("date&time").innerHTML = d;
 <hr>
   <h3 id="Analysis and discussion">Analysis and discussion</h3>
   <p class="ex1">
-    <pre id="Analysis_InText">
+    <pre>
       <h3 id="Platonism">Platonism</h3>
       <pre id="Platonism_InText">
       Platonism is the belief that mathematical objects exist independently of human thoughts. This can be supported with Bouveresse J (2005) ‘On the Meaning of the Word ‘Platonism’ in the Expression 
@@ -199,12 +199,11 @@ document.getElementById("date&time").innerHTML = d;
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
-    const PlatonismCount = displayWordCount("Platonism_InText")
+    const Platonismcount = displayWordCount("Platonism_InText")
     const ConstructivismCount = displayWordCount("Constructivism_InText")
     const A belief in both Discovery and CreativityCount = displayWordCount("A belief in both Discovery and Creativity_InText")
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount + PlatonismCount + ConstructivismCount + A belief in both Discovery and CreativityCount;
+    const totalWordCount = IntroductionCount + PlatonismCount + ConstructivismCount + A belief in both Discovery and CreativityCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
