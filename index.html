@@ -102,17 +102,22 @@ document.getElementById("date&time").innerHTML = d;
   <h3 id="Analysis and discussion">Analysis and discussion</h3>
   <p class="ex1">
     <pre>
-      Platonism
+      <h3 id="Platonism">Platonism</h3>
+      <pre id="Platonism_InText">
       Platonism is the belief that mathematical objects exist independently of human thoughts. This can be supported with Bouveresse J (2005) ‘On the Meaning of the Word ‘Platonism’ in the Expression 
       ‘Mathematical Platonism’. Proceedings of the Aristotelian Society. Volume 105 (New Series), pp. 55-79 “For PLATO, the mathematical world is an independent world, bearing in itself its own laws… the existence 
       of the mathematical beings is independent of human thinking”. Therefore, this identifies that Platonists believe humans have no part in the creation of mathematical concepts and that they already exist for 
       humans to discover. In addition, as this reference states that mathematics has “bearing in itself its own laws”, this is used to show that mathematics is its own enclosed system which further supports the 
       belief that humans don’t invent mathematics, they only uncover what already exists.
-      
-      Constructivism
+      </pre>
+
+      <h3 id="Constructivism">Constructivism</h3>
+      <pre id="Constructivism_InText">
       When written add here!
-      
-      A belief in both Discovery and Creativity
+      </pre>
+
+      <h3 id="A belief in both Discovery and Creativity">A belief in both Discovery and Creativity</h3>
+      <pre id="A belief in both Discovery and Creativity_InText">
       However, some mathematicians believe that discovery and creativity are both important in the future of mathematical advances. This is referenced from 
       <a href="https://www-jstor-org.surrey.idm.oclc.org/stable/27966866?sid=primo">H. Veldkamp A (1990) ‘Created or discovered?’ The Mathematics Teacher Volume 83 (Number 8), p. 599</a>
       “… neither can operate except in interaction with the other… mathematics advances through the interaction of discovery and creativity.” The Author of this journal article states 
@@ -120,13 +125,6 @@ document.getElementById("date&time").innerHTML = d;
       objects by extracting elements from the world. In addition, the Author suggests that for either one to occur they must both occur together, which proposes a link between creation and discovery, and how they aid each 
       other in mathematical development rather than appose.
       </pre>
-      <hr>
-      <h3 id="References">References</h3>
-      <p class"ex1">
-        <pre>
-          When written add here!
-        </pre>
-        
     </pre>
   </p>
 
@@ -175,29 +173,22 @@ document.getElementById("date&time").innerHTML = d;
 <p id="totalWordCount"></p>
 <hr>
 <script>
-  // Function to calculate and display word count for a specified section
   function displayWordCount(sectionId, outputId) {
-    // Get the text content from the specified section
     const text = document.getElementById(sectionId).textContent;
-    // Split text into words based on spaces and filter out any empty strings
     const wordArray = text.trim().split(/\s+/);
-    // Count the words
     const wordCount = wordArray.length;
-    // Return the word count for summing purposes
     return wordCount;
   }
-  // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
-    // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
-    // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
-    // Display the total word count
+    const Platonismcount = displayWordCount("Platonism_InText")
+    const ConstructivismCount = displayWordCount("Constructivism_InText")
+    const A belief in both Discovery and CreativityCount = displayWordCount("A belief in both Discovery and Creativity_InText")
+    const totalWordCount = IntroductionCount + PlatonismCount + ConstructivismCount + A belief in both Discovery and CreativityCount;
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
-  // Run the function for specific sections and display total count when the page loads
   window.onload = displayTotalWordCount;
+
 </script>
 
 </html>
